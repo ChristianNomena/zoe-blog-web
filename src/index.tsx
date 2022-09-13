@@ -4,19 +4,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { Provider } from "react-redux";
-import { applyMiddleware, createStore } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
-import thunk from "redux-thunk";
-import rootReducer from "./reducers";
+import store from './store';
 
 import "tailwindcss/tailwind.css";
 import "aos/dist/aos.css";
 import "./styles/index.scss";
-
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(thunk))
-);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
