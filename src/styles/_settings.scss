@@ -1,3 +1,24 @@
 .container {
     margin: auto;
 }
+
+.full-page {
+    min-height: 600px;
+    height: calc(100vh);
+}
+
+// =============== COLORS ===============
+$dark-color: #0F0F0F;
+$second-dark-color: #1A1A1A;
+
+$light-color: #fafafa;
+$grey-color: #9A9A9A;
+$fade-light-color: #dcdcdcd9;
+
+$primary-color: #0786AB;
+$secondary-color: #b84c49;
+$third-color: #6F4BA1;
+
+$fade-primary-color: #0785abbf;
+$fade-secondary-color: #b84c49bf;
+$fade-third-color: #6e4ba0d9;
