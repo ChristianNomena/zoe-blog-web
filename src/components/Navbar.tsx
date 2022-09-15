@@ -7,11 +7,11 @@ function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ');
 }
 
-type UserProps = {
+type props = {
     user?: {}
 }
 
-const Navbar = (props: UserProps) => {
+const Navbar = (props: props) => {
     const navigation = [
         { name: 'Accueil', href: '/', current: true },
         { name: 'Blog', href: '#', current: false },
@@ -33,24 +33,24 @@ const Navbar = (props: UserProps) => {
 
     return (
         <div className='*Navbar fixed w-full'>
-            <Disclosure as="nav" className={navbarOnTop ? 'bg-lightFade lg:bg-transparent' : 'bg-lightFade'}>
+            <Disclosure as="nav" className={navbarOnTop ? 'bg-light-fade sm:bg-transparent' : 'bg-light-fade'}>
                 {({ open }) => (
                     <>
-                        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                        <div className="container px-2 sm:px-0">
                             <div className="relative flex h-16 items-center justify-between">
                                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                     {/* Mobile menu button*/}
                                     <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                                     <span className="sr-only">Ouvrir le menu</span>
                                     {open ? (
-                                        <XMarkIcon className="block h-6 w-6 text-gray-900" aria-hidden="true" />
+                                        <XMarkIcon className="block h-6 w-6 text-gray-800" aria-hidden="true" />
                                     ) : (
-                                        <Bars3Icon className="block h-6 w-6 text-gray-900" aria-hidden="true" />
+                                        <Bars3Icon className="block h-6 w-6 text-gray-800" aria-hidden="true" />
                                     )}
                                     </Disclosure.Button>
                                 </div>
                                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                                    <div className={classNames(navbarOnTop ? "text-gray-900 lg:text-gray-300" : "text-gray-900" , "flex flex-shrink-0 items-center font-bold")}>
+                                    <div className={classNames(navbarOnTop ? "text-gray-900 sm:text-gray-300" : "text-gray-900" , "flex flex-shrink-0 items-center font-bold")}>
                                         <NavLink to="/">
                                             <div className='flex h-8 w-auto lg:hidden items-center mt-1'>
                                                 Zoe Blog

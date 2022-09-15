@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Testimony from '../components/Testimony';
 
 const HomePage = () => {
     return (
@@ -12,8 +13,11 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div className='container py-64'>
-                <p>Hey there !!!</p>
+            <div className='container container-lg py-16 px-6 lg:px-0'>
+                <h1 className='text-4xl font-semibold text-center text-gray-700'>Témoignages récents</h1>
+                <div className='pt-16'>
+                    <Testimony title='Titre du témoignage' />
+                </div>
             </div>
         </div>
     );

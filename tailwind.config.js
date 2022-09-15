@@ -7,16 +7,24 @@ module.exports = {
     extend: {
       colors: {
         light: "#fafafa",
-        lightFade: "#dcdcdcd9",
+        'light-fade': "#dcdcdcd9",
         dark: "#0F0F0F",
-        darkSecond: "1A1A1A",
+        'dark-second': "1A1A1A",
         primary: "#0786AB",
-        primaryFade: "#0785abbf",
+        'primary-fade': "#0785abbf",
         secondary: "b84c49",
-        secondaryFade: "#b84c49bf",
+        'secondary-fade': "#b84c49bf",
         third: "#6F4BA1",
-        thirdFade: "#6e4ba0d9",
+        'third-fade': "#6e4ba0d9",
       },
+
+      container: {
+        center: true
+      },
+
+      spacing: {
+        128: "34rem",
+      }
     },
   },
   plugins: [],
