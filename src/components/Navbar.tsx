@@ -8,15 +8,15 @@ function classNames(...classes: string[]) {
 }
 
 type props = {
-    user?: {}
+    user?: {},
+    currentPage: String
 }
 
 const Navbar = (props: props) => {
     const navigation = [
-        { name: 'Accueil', href: '/', current: true },
-        { name: 'Blog', href: '#', current: false },
-        { name: 'A propos', href: '#', current: false },
-        { name: 'Connexion', href: '#', current: false }
+        { name: 'Accueil', href: '/', current: props.currentPage === 'home' ? true : false },
+        { name: 'Blog', href: '/blog', current: props.currentPage === 'blog' ? true : false },
+        { name: 'A propos', href: '/about', current: props.currentPage === 'about' ? true : false }
     ];
 
     const [navbarOnTop, setNavbarPosition] = useState(true);
@@ -50,7 +50,7 @@ const Navbar = (props: props) => {
                                     </Disclosure.Button>
                                 </div>
                                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                                    <div className={classNames(navbarOnTop ? "text-gray-900 sm:text-gray-300" : "text-gray-900" , "flex flex-shrink-0 items-center font-bold")}>
+                                    <div className={classNames(navbarOnTop ? "text-gray-900 sm:text-gray-300" : "text-gray-900" , "flex flex-shrink-0 items-center font-bold text-lg")}>
                                         <NavLink to="/">
                                             <div className='flex h-8 w-auto lg:hidden items-center mt-1'>
                                                 Zoe Blog
@@ -74,13 +74,16 @@ const Navbar = (props: props) => {
                                                 !navbarOnTop ? 'text-gray-900 border-b border-gray-900' : 'text-gray-100 border-b border-gray-100'
                                             ) : (
                                                 !navbarOnTop ? 'text-gray-600 hover:text-gray-900' : 'text-gray-400 hover:text-gray-100'
-                                            ), 'px-3 py-2 text-sm font-medium'
+                                            ), 'px-3 py-2 text-base font-medium'
                                             )}
                                             aria-current={item.current ? 'page' : undefined}
                                         >
                                             {item.name}
                                         </a>
                                         ))}
+                                        <a href='/login' className={'text-dark font-medium border rounded bg-gray-100 hover:bg-primary hover:border-primary hover:text-white flex items-center px-4 transition ease-linear duration-200'}>
+                                            Connexion
+                                        </a>
                                     </div>
                                 </div>
                                 { props.user && (

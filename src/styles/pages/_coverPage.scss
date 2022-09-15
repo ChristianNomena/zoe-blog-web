@@ -1,0 +1,34 @@
+.HomePage {
+    .site__blocks--home {
+        background-image: url("../../images/hero_home.jpg");
+        background-position: center;
+    }
+}
+
+.BlogPage {
+    .site__blocks--blog {
+        background-image: url("../../images/hero_blog.jpg");
+        background-position: center;
+    }
+}
+
+.AboutPage {
+    .site__blocks--about {
+        background-image: url("../../images/hero_about.jpg");
+        background-position: center;
+    }
+}
+
+.LoginPage {
+    .site__blocks--login {
+        background-image: url("../../images/hero_login.jpg");
+        background-position: center;
+    }
+}
+
+.RegisterPage {
+    .site__blocks--register {
+        background-image: url("../../images/hero_register.jpg");
+        background-position: center;
+    }
+}
